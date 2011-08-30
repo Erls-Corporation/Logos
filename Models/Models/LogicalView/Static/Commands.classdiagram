@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="dd0f7d6e-80df-41d8-b9c8-048fc74274b9" name="Commands" linkedPackageId="6ee6474c-e539-48ff-94e2-37baf4986ac6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="316d7086-0c1d-40f2-aaee-3b3c131840b3" name="DomainDrivenDesignModel" profile="DomainDrivenDesignModeling">
+      <elementDefinition Id="ae32c2c9-98cf-4a4f-bc1d-3315a804d759" />
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9573ccf7-849a-4b38-99b9-ef622760d8cb" name="Add Github Repository" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="629fc9a8-a74f-44b3-9baa-b9d3774951f3" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="809ea827-4ca6-463c-ad48-d8b2ad76bd53" name="Add Sourcefile" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b8a8baff-a923-4e3d-9665-76b243f85136" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f38be503-1056-4071-abcb-1feafd4c1070" name="Add Tag" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b17f4491-ece1-4045-8269-81a5f135e806" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1b81b698-4998-462e-ac51-da0e45a9781e" name="Remove Tag" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c9283f45-1333-4915-8a8c-59fad6256915" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4e3461ec-dcc3-48d9-b8a7-bb6f7cd4ca75" name="Remove Sourcefile" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2d0fd2ec-98a5-454c-82b8-26a63a4022ae" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bb27831c-b29f-4d1a-94f9-7cbc9b74c0ff" name="Remove Github Repository" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3665f6ad-e803-4ed3-b727-39bd903a193f" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="6ee6474c-e539-48ff-94e2-37baf4986ac6" name="Models">
+    <elementDefinition Id="82ea3f5a-ccf8-4e9e-bf1d-f39a8f19da85" />
+    <profileInstances>
+      <packageHasProfileInstances Id="668e1d30-68ce-414a-9184-9a8ba1f0f397">
+        <profileInstance Id="63a98729-4e5b-49bc-9cf2-b3a6ed3923f1" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="fc523f9d-4e99-45b8-9e68-79ba38afa33d">
+        <profileInstance Id="bea29934-a8ca-4b45-ab7a-8012a2229397" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="fe12788d-c10e-4835-a680-a873dceff698">
+        <profileInstance Id="c75fcd52-ebeb-4260-83a8-2f95e53faf0d" name="DomainDrivenDesignModeling">
+          <elementDefinition Id="76f1eeeb-ead0-464e-be04-6717cf712f39" />
+        </profileInstance>
+        <elementDefinition Id="b45dad57-3ea9-48af-ac7d-97380cbf3d5b" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

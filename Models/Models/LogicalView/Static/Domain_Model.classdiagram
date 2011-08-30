@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d2fca75f-e38c-4ec4-914f-a4abf80dea72" name="Domain_Model" linkedPackageId="3c05fc1a-162c-4b0c-b4c9-57cae9533c1c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="6bb50f77-da2f-4f1f-b9e7-0c37a317dbb8">
+      <elementDefinition Id="1c53205b-f6c2-421d-b221-998d909d37ad" />
+      <body>Aggregate Boundary. Makes sure that within a Githubrepository all sourcefiles and tags are consistent.</body>
+      <annotatedElements>
+        <classMoniker Id="82b953ef-398b-491c-b903-321bbc56b141" LastKnownName="Sourcefile" />
+        <classMoniker Id="4ec9c65a-a746-4d5f-bfff-6673eb7c6df6" LastKnownName="GithubRepository" />
+      </annotatedElements>
+    </comment>
+    <comment Id="bc8c3db4-51cc-472f-8fcf-e52367701092">
+      <elementDefinition Id="37ed9115-184a-4b5a-af3b-c8495a1d8b65" />
+      <body>Aggregate Boundary. Makes sure a tag, which is available to all, is consistent.</body>
+      <annotatedElements>
+        <classMoniker Id="10774326-eaff-422f-8f0a-a4fce4aa0f11" LastKnownName="Tag" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="7a85c08d-e2fb-4e24-ad8f-7dfc0acd7e2e" name="DomainDrivenDesignModel" profile="DomainDrivenDesignModeling">
+      <elementDefinition Id="ae32c2c9-98cf-4a4f-bc1d-3315a804d759" />
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4ec9c65a-a746-4d5f-bfff-6673eb7c6df6" name="GithubRepository" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="8dd8cc02-4e6e-4f9b-bc0e-8ccee9e00c0e" name="Entity" profile="DomainDrivenDesignModeling">
+            <elementDefinition Id="3e3c7488-3268-413d-9f4f-447bfbf200ae" />
+          </stereotypeInstance>
+          <stereotypeInstance Id="01d5338f-dd22-4df0-b150-d11f04a52c6c" name="AggregateRoot" profile="DomainDrivenDesignModeling">
+            <elementDefinition Id="2c7750ec-eddd-4d0d-b677-7c52e51a63bd" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="fdb44859-c403-49c6-b7fe-06c495a3d955" />
+        <targetEnds>
+          <association Id="4b81197a-a4a6-4c2a-8712-ea81cfa0cc8d" isDerived="false" sourceEndRoleName="GithubRepository" targetEndRoleName="Sourcefile" isLeaf="false" isAbstract="false">
+            <classMoniker Id="82b953ef-398b-491c-b903-321bbc56b141" LastKnownName="Sourcefile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="45f5f115-acd6-4a87-8e12-e4cfe819bb81" name="GithubRepository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="be39a2e2-7675-4ee4-996a-510d1d8696b7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b724e80b-e4cb-47eb-a889-7e7bac29a48d" name="Sourcefile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="bf19b64c-f291-4226-8bc0-fe6a80159032" name="Lower" value="0">
+                      <elementDefinition Id="ce30f435-9a10-449e-900d-084c52a538fb" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="cd4dc7a4-8926-4c0c-af8c-070b5b09b726" name="Upper" value="*">
+                      <elementDefinition Id="5095e51f-dbe2-4f84-bd3e-5fb8697d6c8c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="486bf7a4-0b3c-4dd9-aa92-6cbdf47d5e8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6be31357-0c8f-442f-a87a-783ea71ae33e" />
+          </association>
+          <association Id="fa31c115-bbb1-4511-af0b-131cbfc74506" isDerived="false" sourceEndRoleName="GithubRepository" targetEndRoleName="Name" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8ea4a8fe-ced1-4ecb-86a5-b80c151d2bc7" LastKnownName="Name" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="130cf34c-3df5-4b30-8749-4916cd70ee26" name="GithubRepository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0e398a40-2709-4851-9a71-d9804087d47b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="72e1a444-9313-4cd2-9d28-c46dc49e73b9" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2e2508d0-9f9a-4b68-98bb-514ac2c77047" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="42605e85-e5fa-45cd-9ef4-8f82cc89d978" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="69685b5f-6588-49b7-92c7-ed2b2b07c258" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="24bb149a-3ce2-49c6-9e35-0c395fc335e6" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="82b953ef-398b-491c-b903-321bbc56b141" name="Sourcefile" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="685bf730-87f3-4825-adbc-43b801622ab2" name="Entity" profile="DomainDrivenDesignModeling">
+            <elementDefinition Id="03f29fe4-8715-41b3-b30c-0d5ac5e6fa33" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="75684dfd-1ef5-4854-899e-44d99ca09ca9" />
+        <targetEnds>
+          <association Id="00ed4552-eedc-45ea-ac27-64181977867b" isDerived="false" sourceEndRoleName="Sourcefile" targetEndRoleName="Tag" isLeaf="false" isAbstract="false">
+            <classMoniker Id="10774326-eaff-422f-8f0a-a4fce4aa0f11" LastKnownName="Tag" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ee42e5b-8b2c-4986-9636-fb8d5cf828c8" name="Sourcefile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="ac4d2bd5-ada7-4ce5-9603-ec9485314386" name="Lower" value="0">
+                      <elementDefinition Id="d095efac-2347-43ed-b370-ff0b3e636110" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="9baf5027-4a59-4a26-ba4e-d1f9f1af213e" name="Upper" value="*">
+                      <elementDefinition Id="bd022729-8bf9-4932-b143-6e5f26ef5c82" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="4d26a20e-2ea5-44c6-92d2-123c867f5c1b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3c9b90b8-36e0-444f-b5ba-3f374063f1f0" name="Tag" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="60bb7c66-d403-4cbd-b028-e33a847a2f0e" name="Lower" value="0">
+                      <elementDefinition Id="1f5d4c21-56ba-4021-9aa6-631fef037a6a" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c8c615c6-6026-4703-bedf-78e3f2f796e0" name="Upper" value="*">
+                      <elementDefinition Id="a98fe9bc-dd44-43ba-96d3-793d05437232" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="bf5d6837-ba5a-45cb-8cb5-b4828b186ca1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="11d93fcf-3805-4e62-89e5-4a63df32cd44" />
+          </association>
+          <association Id="a2a689b0-f0aa-4eff-861d-1c47db4ba1f8" isDerived="false" sourceEndRoleName="Sourcefile" targetEndRoleName="Name" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8ea4a8fe-ced1-4ecb-86a5-b80c151d2bc7" LastKnownName="Name" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b44fbe3-d886-4275-bc96-34359214e76d" name="Sourcefile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="486f70e5-0cdc-464c-a07c-6eb5a7b5be0f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d7f57ba2-136b-49f7-a029-3495b2c9db2e" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="50646596-e7a0-483a-b3d0-91e84b250558" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="68516f8a-9c1d-454a-9646-ff1944dabc1a" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="21979118-026b-4582-9de7-45290791d7f6" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="02ebc713-518b-47ab-b584-7798492289b2" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="10774326-eaff-422f-8f0a-a4fce4aa0f11" name="Tag" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="38cd2b16-78cd-46ab-8782-11efdf4b9c1b" name="Entity" profile="DomainDrivenDesignModeling">
+            <elementDefinition Id="9104576a-4caa-44bd-965f-03d376951fee" />
+          </stereotypeInstance>
+          <stereotypeInstance Id="d76fd151-ca3f-441b-825d-5a37fd901cf8" name="AggregateRoot" profile="DomainDrivenDesignModeling">
+            <elementDefinition Id="73cd9187-98f1-444f-bd17-29426fa82b9a" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="c01b84a5-93f4-42e9-ad73-fd1ecd9d78f9" />
+        <targetEnds>
+          <association Id="90c5b0cb-6cbc-4aa6-8f7f-25f949bc8f0a" isDerived="false" sourceEndRoleName="Tag" targetEndRoleName="Name" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8ea4a8fe-ced1-4ecb-86a5-b80c151d2bc7" LastKnownName="Name" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4eb3864f-6f4b-4192-b548-9d6749f5554f" name="Tag" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c24fc24d-829b-479d-9854-091b89e4589e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2dbb7f2b-acf7-43f6-8cb3-d08e737784cc" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="70749433-743a-4da8-b8c7-98711806db92" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="780d9514-e1b9-4e54-a368-a74f1aa7aa47" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8ea4a8fe-ced1-4ecb-86a5-b80c151d2bc7" name="Name" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="a60f1508-ced6-4bb8-b7b0-3a761a81ff05" name="ValueObject" profile="DomainDrivenDesignModeling">
+            <elementDefinition Id="9334f243-1c03-4219-8898-cf29a4cc0c1c" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="e18e0abc-ea3e-406d-a86f-6d90530fa6c7" />
+        <ownedAttributesInternal>
+          <property Id="55349110-8281-479f-abf1-d94d2cc720c2" name="Value" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="83293331-c5ae-431c-b31c-caa075a8a0e7" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="3c05fc1a-162c-4b0c-b4c9-57cae9533c1c" name="Models">
+    <elementDefinition Id="82ea3f5a-ccf8-4e9e-bf1d-f39a8f19da85" />
+    <profileInstances>
+      <packageHasProfileInstances Id="26de1c70-735c-494b-9d80-e3bae7b8bd35">
+        <profileInstance Id="c8939e9e-c831-486b-a873-1af663371713" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3d2e9fbf-b292-4c67-8962-3d737bc16539">
+        <profileInstance Id="bc586306-888f-4a5a-80df-c346b7307815" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9ab47a23-1214-4bd3-b303-8daa40e40b3d">
+        <profileInstance Id="3176cc75-aa77-4a7b-bc0e-c2811bcbc72d" name="DomainDrivenDesignModeling">
+          <elementDefinition Id="76f1eeeb-ead0-464e-be04-6717cf712f39" />
+        </profileInstance>
+        <elementDefinition Id="b45dad57-3ea9-48af-ac7d-97380cbf3d5b" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

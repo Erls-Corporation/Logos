@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="82ea3f5a-ccf8-4e9e-bf1d-f39a8f19da85"
+  name="Models" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="1c53205b-f6c2-421d-b221-998d909d37ad">
+      <body>Aggregate Boundary. Makes sure that within a Githubrepository all sourcefiles and tags are consistent.</body>
+      <annotatedElements>
+        <classMoniker
+          Id="75684dfd-1ef5-4854-899e-44d99ca09ca9"
+          LastKnownName="Sourcefile"
+          LastKnownLocation="Models.uml" />
+        <classMoniker
+          Id="fdb44859-c403-49c6-b7fe-06c495a3d955"
+          LastKnownName="GithubRepository"
+          LastKnownLocation="Models.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="37ed9115-184a-4b5a-af3b-c8495a1d8b65">
+      <body>Aggregate Boundary. Makes sure a tag, which is available to all, is consistent.</body>
+      <annotatedElements>
+        <classMoniker
+          Id="c01b84a5-93f4-42e9-ad73-fd1ecd9d78f9"
+          LastKnownName="Tag"
+          LastKnownLocation="Models.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="ae32c2c9-98cf-4a4f-bc1d-3315a804d759"
+      name="DomainDrivenDesignModel"
+      profile="DomainDrivenDesignModeling" />
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="b45dad57-3ea9-48af-ac7d-97380cbf3d5b">
+      <profileInstance
+        Id="76f1eeeb-ead0-464e-be04-6717cf712f39"
+        name="DomainDrivenDesignModeling" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="fdb44859-c403-49c6-b7fe-06c495a3d955"
+        name="GithubRepository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3e3c7488-3268-413d-9f4f-447bfbf200ae"
+            name="Entity"
+            profile="DomainDrivenDesignModeling" />
+          <stereotypeInstance
+            Id="2c7750ec-eddd-4d0d-b677-7c52e51a63bd"
+            name="AggregateRoot"
+            profile="DomainDrivenDesignModeling" />
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="6be31357-0c8f-442f-a87a-783ea71ae33e"
+            isDerived="false"
+            sourceEndRoleName="GithubRepository"
+            targetEndRoleName="Sourcefile"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="75684dfd-1ef5-4854-899e-44d99ca09ca9"
+              LastKnownName="Sourcefile"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="be39a2e2-7675-4ee4-996a-510d1d8696b7"
+                  name="GithubRepository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="486bf7a4-0b3c-4dd9-aa92-6cbdf47d5e8a"
+                  name="Sourcefile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ce30f435-9a10-449e-900d-084c52a538fb"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5095e51f-dbe2-4f84-bd3e-5fb8697d6c8c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="42605e85-e5fa-45cd-9ef4-8f82cc89d978"
+            isDerived="false"
+            sourceEndRoleName="GithubRepository"
+            targetEndRoleName="Name"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e18e0abc-ea3e-406d-a86f-6d90530fa6c7"
+              LastKnownName="Name"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0e398a40-2709-4851-9a71-d9804087d47b"
+                  name="GithubRepository"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2e2508d0-9f9a-4b68-98bb-514ac2c77047"
+                  name="Name"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="24bb149a-3ce2-49c6-9e35-0c395fc335e6"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="75684dfd-1ef5-4854-899e-44d99ca09ca9"
+        name="Sourcefile"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="03f29fe4-8715-41b3-b30c-0d5ac5e6fa33"
+            name="Entity"
+            profile="DomainDrivenDesignModeling" />
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="11d93fcf-3805-4e62-89e5-4a63df32cd44"
+            isDerived="false"
+            sourceEndRoleName="Sourcefile"
+            targetEndRoleName="Tag"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c01b84a5-93f4-42e9-ad73-fd1ecd9d78f9"
+              LastKnownName="Tag"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4d26a20e-2ea5-44c6-92d2-123c867f5c1b"
+                  name="Sourcefile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d095efac-2347-43ed-b370-ff0b3e636110"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bd022729-8bf9-4932-b143-6e5f26ef5c82"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bf5d6837-ba5a-45cb-8cb5-b4828b186ca1"
+                  name="Tag"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1f5d4c21-56ba-4021-9aa6-631fef037a6a"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a98fe9bc-dd44-43ba-96d3-793d05437232"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="68516f8a-9c1d-454a-9646-ff1944dabc1a"
+            isDerived="false"
+            sourceEndRoleName="Sourcefile"
+            targetEndRoleName="Name"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e18e0abc-ea3e-406d-a86f-6d90530fa6c7"
+              LastKnownName="Name"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="486f70e5-0cdc-464c-a07c-6eb5a7b5be0f"
+                  name="Sourcefile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="50646596-e7a0-483a-b3d0-91e84b250558"
+                  name="Name"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="02ebc713-518b-47ab-b584-7798492289b2"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c01b84a5-93f4-42e9-ad73-fd1ecd9d78f9"
+        name="Tag"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9104576a-4caa-44bd-965f-03d376951fee"
+            name="Entity"
+            profile="DomainDrivenDesignModeling" />
+          <stereotypeInstance
+            Id="73cd9187-98f1-444f-bd17-29426fa82b9a"
+            name="AggregateRoot"
+            profile="DomainDrivenDesignModeling" />
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="780d9514-e1b9-4e54-a368-a74f1aa7aa47"
+            isDerived="false"
+            sourceEndRoleName="Tag"
+            targetEndRoleName="Name"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e18e0abc-ea3e-406d-a86f-6d90530fa6c7"
+              LastKnownName="Name"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c24fc24d-829b-479d-9854-091b89e4589e"
+                  name="Tag"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="70749433-743a-4da8-b8c7-98711806db92"
+                  name="Name"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="629fc9a8-a74f-44b3-9baa-b9d3774951f3"
+        name="Add Github Repository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b8a8baff-a923-4e3d-9665-76b243f85136"
+        name="Add Sourcefile"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="345984e5-cd97-460f-ab4a-b83a7c950e5b"
+        name="Add Tag"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b17f4491-ece1-4045-8269-81a5f135e806"
+        name="Add Tag"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c9283f45-1333-4915-8a8c-59fad6256915"
+        name="Remove Tag"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2d0fd2ec-98a5-454c-82b8-26a63a4022ae"
+        name="Remove Sourcefile"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3665f6ad-e803-4ed3-b727-39bd903a193f"
+        name="Remove Github Repository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ab51d830-e315-44dd-91eb-9c8a7cd234c4"
+        name="Github Repository Added"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="62e835ae-ac37-4a36-90ce-0a9dd8621c70"
+        name="Sourcefile Added"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0dfb6039-866d-4af7-8841-d9b561924d35"
+        name="Tag Added"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a44aad33-13ca-4122-88b0-92bb93895179"
+        name="Tag Removed"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e9417fbb-32b1-4052-b14b-688a07fe93c5"
+        name="Sourcefile Removed"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0eb0b631-293a-49e3-9a85-7a3bf9bc1362"
+        name="Github Repository Removed"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e18e0abc-ea3e-406d-a86f-6d90530fa6c7"
+        name="Name"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9334f243-1c03-4219-8898-cf29a4cc0c1c"
+            name="ValueObject"
+            profile="DomainDrivenDesignModeling" />
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="83293331-c5ae-431c-b31c-caa075a8a0e7"
+            name="Value"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="25bfe99b-3a6d-40df-a424-46efdd50df03"
+        name="Import Github Repository"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
