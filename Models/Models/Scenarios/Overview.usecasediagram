@@ -245,6 +245,28 @@
         </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a682e270-9f99-49aa-89ac-4d241282b6ea" name="Search by name" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="378f0f70-4890-4739-ba29-6fdada166820" />
+        <extendedCases>
+          <extend Id="1fbdccb9-9c45-4374-aac7-db9882775704">
+            <useCaseMoniker Id="b26d360a-cb19-43f8-92d3-b0a6cd54257f" LastKnownName="Search Sourcefile" />
+            <elementDefinition Id="c5b93979-35db-49f4-83bf-473d71cb2368" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d3622747-f914-4107-9c12-cd3ac5315a72" name="Search by tag" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="40b2d4ff-c9d8-4af3-a039-66c5327aa78b" />
+        <extendedCases>
+          <extend Id="9cb70eab-76f0-4803-9c89-050b0ceac20c">
+            <useCaseMoniker Id="b26d360a-cb19-43f8-92d3-b0a6cd54257f" LastKnownName="Search Sourcefile" />
+            <elementDefinition Id="76da72aa-6910-4af1-b9ca-11498af599f6" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="928d1a50-0202-4e68-8d2b-0ba49cb294b5" name="Models">
     <elementDefinition Id="82ea3f5a-ccf8-4e9e-bf1d-f39a8f19da85" />

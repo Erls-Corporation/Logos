@@ -961,6 +961,40 @@
         </extendedCases>
       </useCase>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="378f0f70-4890-4739-ba29-6fdada166820"
+        name="Search by name"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c5b93979-35db-49f4-83bf-473d71cb2368">
+            <useCaseMoniker
+              Id="823e2496-c293-4d10-8718-658fa2fac121"
+              LastKnownName="Search Sourcefile"
+              LastKnownLocation="Models.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40b2d4ff-c9d8-4af3-a039-66c5327aa78b"
+        name="Search by tag"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="76da72aa-6910-4af1-b9ca-11498af599f6">
+            <useCaseMoniker
+              Id="823e2496-c293-4d10-8718-658fa2fac121"
+              LastKnownName="Search Sourcefile"
+              LastKnownLocation="Models.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

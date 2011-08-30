@@ -27,6 +27,9 @@
       <SubType>Content</SubType>
       <DependentUpon>Scenarios\Overview.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="Scenarios\Remove Sourcefile Tag.md">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Scenarios\Remove_Github_Repository.md">
       <SubType>Content</SubType>
     </Content>
