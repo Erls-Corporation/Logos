@@ -17,6 +17,19 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
   <ItemGroup>
+    <Content Include="Scenarios\Add_Github_Repository.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scenarios\Overview.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Scenarios\Overview.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Scenarios\Overview.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="Scenarios\Use_Case_Template.md">
+      <SubType>Content</SubType>
+    </Content>
     <Folder Include="LogicalView\Behaviour" />
     <Folder Include="LogicalView\Static" />
     <Folder Include="ModelDefinition\" />

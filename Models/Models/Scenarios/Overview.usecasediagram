@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="098c628a-48db-436e-b43c-f543ef90be23" name="Overview" linkedPackageId="928d1a50-0202-4e68-8d2b-0ba49cb294b5" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <appliedStereotypesInternal>
+    <stereotypeInstance Id="bbeaf64f-89eb-4368-ab68-5d4d8df4a355" name="DomainDrivenDesignModel" profile="DomainDrivenDesignModeling">
+      <elementDefinition Id="ae32c2c9-98cf-4a4f-bc1d-3315a804d759" />
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="ccd23711-f8e1-42ae-8f66-4a919da6077b">
+      <profileInstance Id="e4e40a31-4b4a-47aa-bc42-841694bebaba" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="dfbca5b3-c983-4a18-a2cf-cc3dd53561b9">
+      <profileInstance Id="038d34d9-bbff-4b18-a038-3a0af36d3e22" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e3b38395-cfa4-40c6-9227-e3a155cb4ca5">
+      <profileInstance Id="02c69592-0a26-413a-9987-f788f406440a" name="DomainDrivenDesignModeling">
+        <elementDefinition Id="76f1eeeb-ead0-464e-be04-6717cf712f39" />
+      </profileInstance>
+      <elementDefinition Id="b45dad57-3ea9-48af-ac7d-97380cbf3d5b" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="0233a9bf-da0d-4403-b6c3-b4ba6fe5587b" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0fb96f81-35c9-48c3-867e-94cddea5b029" />
+        <targetEnds>
+          <association Id="1afe4084-01ed-47c6-9f44-bf4945db1323" isDerived="false" sourceEndRoleName="Github User" targetEndRoleName="Add Github Repository" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="725be9ad-a427-4434-9dcb-4f740e698b2b" LastKnownName="Add Github Repository" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68593214-cfc1-420e-8d3f-85418e75a5c5" name="Github User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c00e2072-9901-4d14-a148-406e67718217" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="adacde34-3798-4112-9991-0b9c109aa18e" name="Add Github Repository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d8a86158-2d47-4fcf-8178-224206e8a34b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="820ae0d1-10a6-4e90-a678-6d2aa74c0245" />
+          </association>
+          <association Id="2a4e0073-2304-4072-ac27-23bbf47f3270" isDerived="false" sourceEndRoleName="Github User" targetEndRoleName="Remove Github Repository" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="60bd0557-ac77-4d03-9ce0-f4384805339a" LastKnownName="Remove Github Repository" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="67583086-e8e1-44f8-bacf-464cae1516dc" name="Github User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e4898ed7-df7e-41e3-941b-36e9fbc69386" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6787a01f-8010-4232-a1da-b26affec92ad" name="Remove Github Repository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5fcd048e-f1d3-4e5d-9858-3b1b66f81d85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="58768d49-2750-400d-b7ae-b32124a0879c" />
+          </association>
+          <association Id="e9de7027-dda1-4c82-b87b-faf3c85f4cff" isDerived="false" sourceEndRoleName="Github User" targetEndRoleName="Tag Sourcefile" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3e9370d1-f0fd-436d-a0d2-de7e3e4724a9" LastKnownName="Tag Sourcefile" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fc580091-7ea7-4f94-8cd9-1f283c43f80d" name="Github User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d441e0f-f3cd-4bbe-86e0-528dba6792e5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f19204d0-b8f8-4185-be7b-fbf4e6542634" name="Tag Sourcefile" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7cb7ffca-1566-47cc-80d0-e4573d13ee5a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ddf4bd81-3af7-4f3e-b1d8-a6a067d32ec3" />
+          </association>
+          <association Id="31ff3db6-0224-449c-8f09-11d3f0feb05a" isDerived="false" sourceEndRoleName="Github User" targetEndRoleName="Remove Sourcefile Tag" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7e4998ab-f059-49a5-a699-d7d45852525c" LastKnownName="Remove Sourcefile Tag" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b0e295ac-7e7c-4b7a-8f03-03e3c1147ae3" name="Github User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9a80c8a4-de3b-483a-a830-4e8430f61b40" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a6a9879e-d54e-4b2c-a37b-1e7f1460d952" name="Remove Sourcefile Tag" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cb2fc7ba-20e2-4dbb-9f0f-3678b4eaf5e9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a157f2f1-5614-4f08-998f-a769ca10f05e" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="725be9ad-a427-4434-9dcb-4f740e698b2b" name="Add Github Repository" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="493e9150-326f-44f1-ac9f-351bb56e296f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="60bd0557-ac77-4d03-9ce0-f4384805339a" name="Remove Github Repository" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="969a1c9c-df95-4bc3-83cb-f8903693edcd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3e9370d1-f0fd-436d-a0d2-de7e3e4724a9" name="Tag Sourcefile" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a5fe6772-dc01-4983-b410-e4d72225c153" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7e4998ab-f059-49a5-a699-d7d45852525c" name="Remove Sourcefile Tag" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="49a39c5b-c66d-4743-a534-31cbd2631eab" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="928d1a50-0202-4e68-8d2b-0ba49cb294b5" name="Models">
+    <elementDefinition Id="82ea3f5a-ccf8-4e9e-bf1d-f39a8f19da85" />
+  </package>
+</useCaseModelRoot>

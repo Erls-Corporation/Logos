@@ -3,7 +3,7 @@
   <logicalClassDesignerModelMoniker Id="dd0f7d6e-80df-41d8-b9c8-048fc74274b9" />
   <nestedChildShapes>
     <classShape Id="4b32a500-e321-4cf7-9f09-52de89fcf62d" isExpanded="false" absoluteBounds="0.875, 1.125, 2.375, 0.5" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-      <classMoniker Id="9573ccf7-849a-4b38-99b9-ef622760d8cb" LastKnownName="Add Github Repository" />
+      <classMoniker Id="9573ccf7-849a-4b38-99b9-ef622760d8cb" LastKnownName="Import Github Repository" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="86684844-7cba-4a83-8468-48cc6774c389" absoluteBounds="0.89000000000000012, 1.5150000000000001, 1.5950000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="b7aa8b8f-9b97-4533-9c3a-9858bb4b0fbc" absoluteBounds="0.89000000000000012, 1.7261718675494193, 1.5950000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />

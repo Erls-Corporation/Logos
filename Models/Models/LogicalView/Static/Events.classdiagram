@@ -1,33 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3129f9c6-606c-492c-913b-b4e395a27558" name="Events" linkedPackageId="6f021742-cf6c-4f7f-bea9-ee0697cdc9d2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="3129f9c6-606c-492c-913b-b4e395a27558" name="Events" linkedPackageId="6f021742-cf6c-4f7f-bea9-ee0697cdc9d2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="6b2c61d7-af05-42f2-b765-f02906719895" name="DomainDrivenDesignModel" profile="DomainDrivenDesignModeling">
       <elementDefinition Id="ae32c2c9-98cf-4a4f-bc1d-3315a804d759" />
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="955da9d1-1d14-440c-87c4-31c990ca9ae2">
-      <profileInstance Id="6fb6b7e1-3ceb-410d-a4ee-4e46c456a0e3" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="4a859cf5-56be-45ed-a5d5-b5a0670ba86b">
-      <profileInstance Id="3e5d38bd-f350-40ef-be89-0c63ccea5102" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="ca30137d-c22b-4c17-ac23-bfb3132c6567">
-      <profileInstance Id="0b4a59c2-bf53-45df-adcc-97fc86e884a6" name="DomainDrivenDesignModeling">
-        <elementDefinition Id="76f1eeeb-ead0-464e-be04-6717cf712f39" />
-      </profileInstance>
-      <elementDefinition Id="b45dad57-3ea9-48af-ac7d-97380cbf3d5b" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="c3d5a1d3-850a-48e3-a38b-d39ac3502490" name="Github Repository Added" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="c3d5a1d3-850a-48e3-a38b-d39ac3502490" name="Github Repository Imported" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="ab51d830-e315-44dd-91eb-9c8a7cd234c4" />
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -59,5 +39,25 @@
   </packagedElements>
   <package Id="6f021742-cf6c-4f7f-bea9-ee0697cdc9d2" name="Models">
     <elementDefinition Id="82ea3f5a-ccf8-4e9e-bf1d-f39a8f19da85" />
+    <profileInstances>
+      <packageHasProfileInstances Id="955da9d1-1d14-440c-87c4-31c990ca9ae2">
+        <profileInstance Id="6fb6b7e1-3ceb-410d-a4ee-4e46c456a0e3" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4a859cf5-56be-45ed-a5d5-b5a0670ba86b">
+        <profileInstance Id="3e5d38bd-f350-40ef-be89-0c63ccea5102" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="ca30137d-c22b-4c17-ac23-bfb3132c6567">
+        <profileInstance Id="0b4a59c2-bf53-45df-adcc-97fc86e884a6" name="DomainDrivenDesignModeling">
+          <elementDefinition Id="76f1eeeb-ead0-464e-be04-6717cf712f39" />
+        </profileInstance>
+        <elementDefinition Id="b45dad57-3ea9-48af-ac7d-97380cbf3d5b" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

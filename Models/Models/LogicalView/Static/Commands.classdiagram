@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="dd0f7d6e-80df-41d8-b9c8-048fc74274b9" name="Commands" linkedPackageId="6ee6474c-e539-48ff-94e2-37baf4986ac6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="dd0f7d6e-80df-41d8-b9c8-048fc74274b9" name="Commands" linkedPackageId="6ee6474c-e539-48ff-94e2-37baf4986ac6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <appliedStereotypesInternal>
     <stereotypeInstance Id="316d7086-0c1d-40f2-aaee-3b3c131840b3" name="DomainDrivenDesignModel" profile="DomainDrivenDesignModeling">
       <elementDefinition Id="ae32c2c9-98cf-4a4f-bc1d-3315a804d759" />
@@ -7,7 +7,7 @@
   </appliedStereotypesInternal>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
-      <class Id="9573ccf7-849a-4b38-99b9-ef622760d8cb" name="Add Github Repository" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="9573ccf7-849a-4b38-99b9-ef622760d8cb" name="Import Github Repository" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="629fc9a8-a74f-44b3-9baa-b9d3774951f3" />
       </class>
     </logicalClassDesignerModelHasTypes>
