@@ -531,7 +531,7 @@
             isAbstract="false">
             <useCaseMoniker
               Id="493e9150-326f-44f1-ac9f-351bb56e296f"
-              LastKnownName="Add Github Repository"
+              LastKnownName="Import Github Repository"
               LastKnownLocation="Models.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -684,7 +684,7 @@
     <packageHasNamedElement>
       <useCase
         Id="493e9150-326f-44f1-ac9f-351bb56e296f"
-        name="Add Github Repository"
+        name="Import Github Repository"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>

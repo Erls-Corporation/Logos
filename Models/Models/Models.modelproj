@@ -17,7 +17,7 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
   <ItemGroup>
-    <Content Include="Scenarios\Add_Github_Repository.md">
+    <Content Include="Scenarios\Import_Github_Repository.md">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Scenarios\Overview.usecasediagram">

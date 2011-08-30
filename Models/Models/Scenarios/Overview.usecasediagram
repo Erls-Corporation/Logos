@@ -31,7 +31,7 @@
         <elementDefinition Id="0fb96f81-35c9-48c3-867e-94cddea5b029" />
         <targetEnds>
           <association Id="1afe4084-01ed-47c6-9f44-bf4945db1323" isDerived="false" sourceEndRoleName="Github User" targetEndRoleName="Add Github Repository" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="725be9ad-a427-4434-9dcb-4f740e698b2b" LastKnownName="Add Github Repository" />
+            <useCaseMoniker Id="725be9ad-a427-4434-9dcb-4f740e698b2b" LastKnownName="Import Github Repository" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="68593214-cfc1-420e-8d3f-85418e75a5c5" name="Github User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -98,7 +98,7 @@
       </actor>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="725be9ad-a427-4434-9dcb-4f740e698b2b" name="Add Github Repository" isAbstract="false" isLeaf="false">
+      <useCase Id="725be9ad-a427-4434-9dcb-4f740e698b2b" name="Import Github Repository" isAbstract="false" isLeaf="false">
         <elementDefinition Id="493e9150-326f-44f1-ac9f-351bb56e296f" />
       </useCase>
     </useCaseModelRootHasTypes>

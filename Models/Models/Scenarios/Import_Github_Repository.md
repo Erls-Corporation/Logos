@@ -1,6 +1,6 @@
 Use case name
 ==============
-Add Github Repository
+Import Github Repository
 
 Summary
 ========
