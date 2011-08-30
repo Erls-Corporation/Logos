@@ -678,6 +678,162 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="e07b417c-551d-42d0-a0bd-c0533b0c895b"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="Search Sourcefile"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="823e2496-c293-4d10-8718-658fa2fac121"
+              LastKnownName="Search Sourcefile"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9a945750-63b2-4fa2-893a-4e89cf93afaf"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="55130c8b-d721-47f0-9fa5-36e8632a5804"
+                  name="Search Sourcefile"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2dd3db23-1b67-4519-a1dc-200571837fae"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="View Github Repositories"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="678a174e-4e10-4191-9aba-993a78324a66"
+              LastKnownName="View Github Repositories"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="08b141a1-9e42-4d6a-b2de-bc4e0589c0ba"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c8aa3eb7-4a62-41f1-8507-7c8b995f59f9"
+                  name="View Github Repositories"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="02ecc0cb-f8ae-47cb-8bad-ba20efb3a772"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="View Sourcefiles"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e75487f8-3bda-441e-8402-7a46759fa5c8"
+              LastKnownName="View Sourcefiles"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ec83240f-4e4b-446b-ab34-6b172467e289"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dae08bda-39d4-4586-b1fd-a57ec19b014c"
+                  name="View Sourcefiles"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="daf2e3b1-a4db-40ae-992c-0dc8cf31d851"
+            isDerived="false"
+            sourceEndRoleName="User"
+            targetEndRoleName="View Tags"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4fd15417-ab6f-4fe0-9824-62cb6e84a0b1"
+              LastKnownName="View Tags"
+              LastKnownLocation="Models.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac72a65b-92e0-4503-b95f-dbe6639609c3"
+                  name="User"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c157b7fb-5d7c-4ded-bf63-7f83c90ae77f"
+                  name="View Tags"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
     </packageHasNamedElement>
@@ -708,6 +864,102 @@
         name="Remove Sourcefile Tag"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="823e2496-c293-4d10-8718-658fa2fac121"
+        name="Search Sourcefile"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="678a174e-4e10-4191-9aba-993a78324a66"
+        name="View Github Repositories"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e75487f8-3bda-441e-8402-7a46759fa5c8"
+        name="View Sourcefiles"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4fd15417-ab6f-4fe0-9824-62cb6e84a0b1"
+        name="View Tags"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="af515691-2aa2-406b-a659-c6c7f5e2f0e1"
+        name="Group by  tag"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="eb0df898-4258-4d42-966e-33f438caf316">
+            <useCaseMoniker
+              Id="e75487f8-3bda-441e-8402-7a46759fa5c8"
+              LastKnownName="View Sourcefiles"
+              LastKnownLocation="Models.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dc7ff173-ae31-4bc9-842d-7670bc84d77b"
+        name="Group by Github Repository"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="4a6ac640-1b9b-4c8a-b435-0eb4601046f9">
+            <useCaseMoniker
+              Id="e75487f8-3bda-441e-8402-7a46759fa5c8"
+              LastKnownName="View Sourcefiles"
+              LastKnownLocation="Models.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f6012438-c8a4-4d59-b244-6e96320ca198"
+        name="Group by tag"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="7aa51006-bfd4-41a8-be9d-17e808535ba4">
+            <useCaseMoniker
+              Id="678a174e-4e10-4191-9aba-993a78324a66"
+              LastKnownName="View Github Repositories"
+              LastKnownLocation="Models.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c1df5726-3c5e-4d6a-872e-813be61d1cc8"
+        name="Group by name"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="62b8b386-5b91-4690-8790-356ff563ff1b">
+            <useCaseMoniker
+              Id="678a174e-4e10-4191-9aba-993a78324a66"
+              LastKnownName="View Github Repositories"
+              LastKnownLocation="Models.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
