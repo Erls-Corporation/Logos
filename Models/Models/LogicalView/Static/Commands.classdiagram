@@ -12,28 +12,8 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="809ea827-4ca6-463c-ad48-d8b2ad76bd53" name="Add Sourcefile" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="b8a8baff-a923-4e3d-9665-76b243f85136" />
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="f38be503-1056-4071-abcb-1feafd4c1070" name="Add Tag" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="f38be503-1056-4071-abcb-1feafd4c1070" name="Tag Sourcefile" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="b17f4491-ece1-4045-8269-81a5f135e806" />
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="1b81b698-4998-462e-ac51-da0e45a9781e" name="Remove Tag" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="c9283f45-1333-4915-8a8c-59fad6256915" />
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="4e3461ec-dcc3-48d9-b8a7-bb6f7cd4ca75" name="Remove Sourcefile" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="2d0fd2ec-98a5-454c-82b8-26a63a4022ae" />
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="bb27831c-b29f-4d1a-94f9-7cbc9b74c0ff" name="Remove Github Repository" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="3665f6ad-e803-4ed3-b727-39bd903a193f" />
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>

@@ -5,26 +5,6 @@
       <elementDefinition Id="ae32c2c9-98cf-4a4f-bc1d-3315a804d759" />
     </stereotypeInstance>
   </appliedStereotypesInternal>
-  <profileInstances>
-    <packageHasProfileInstances Id="ccd23711-f8e1-42ae-8f66-4a919da6077b">
-      <profileInstance Id="e4e40a31-4b4a-47aa-bc42-841694bebaba" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="dfbca5b3-c983-4a18-a2cf-cc3dd53561b9">
-      <profileInstance Id="038d34d9-bbff-4b18-a038-3a0af36d3e22" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="e3b38395-cfa4-40c6-9227-e3a155cb4ca5">
-      <profileInstance Id="02c69592-0a26-413a-9987-f788f406440a" name="DomainDrivenDesignModeling">
-        <elementDefinition Id="76f1eeeb-ead0-464e-be04-6717cf712f39" />
-      </profileInstance>
-      <elementDefinition Id="b45dad57-3ea9-48af-ac7d-97380cbf3d5b" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="0233a9bf-da0d-4403-b6c3-b4ba6fe5587b" name="User" isAbstract="false" isLeaf="false">
@@ -46,22 +26,6 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="820ae0d1-10a6-4e90-a678-6d2aa74c0245" />
           </association>
-          <association Id="2a4e0073-2304-4072-ac27-23bbf47f3270" isDerived="false" sourceEndRoleName="Github User" targetEndRoleName="Remove Github Repository" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="60bd0557-ac77-4d03-9ce0-f4384805339a" LastKnownName="Remove Github Repository" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="67583086-e8e1-44f8-bacf-464cae1516dc" name="Github User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="e4898ed7-df7e-41e3-941b-36e9fbc69386" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="6787a01f-8010-4232-a1da-b26affec92ad" name="Remove Github Repository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5fcd048e-f1d3-4e5d-9858-3b1b66f81d85" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="58768d49-2750-400d-b7ae-b32124a0879c" />
-          </association>
           <association Id="e9de7027-dda1-4c82-b87b-faf3c85f4cff" isDerived="false" sourceEndRoleName="Github User" targetEndRoleName="Tag Sourcefile" isLeaf="false" isAbstract="false">
             <useCaseMoniker Id="3e9370d1-f0fd-436d-a0d2-de7e3e4724a9" LastKnownName="Tag Sourcefile" />
             <relationshipOwnedElementsInternal>
@@ -77,22 +41,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="ddf4bd81-3af7-4f3e-b1d8-a6a067d32ec3" />
-          </association>
-          <association Id="31ff3db6-0224-449c-8f09-11d3f0feb05a" isDerived="false" sourceEndRoleName="Github User" targetEndRoleName="Remove Sourcefile Tag" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="7e4998ab-f059-49a5-a699-d7d45852525c" LastKnownName="Remove Sourcefile Tag" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="b0e295ac-7e7c-4b7a-8f03-03e3c1147ae3" name="Github User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="9a80c8a4-de3b-483a-a830-4e8430f61b40" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="a6a9879e-d54e-4b2c-a37b-1e7f1460d952" name="Remove Sourcefile Tag" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="cb2fc7ba-20e2-4dbb-9f0f-3678b4eaf5e9" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="a157f2f1-5614-4f08-998f-a769ca10f05e" />
           </association>
           <association Id="3ecf6a78-59f6-465c-a362-7ed7eead56e7" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Search Sourcefile" isLeaf="false" isAbstract="false">
             <useCaseMoniker Id="b26d360a-cb19-43f8-92d3-b0a6cd54257f" LastKnownName="Search Sourcefile" />
@@ -110,54 +58,6 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="e07b417c-551d-42d0-a0bd-c0533b0c895b" />
           </association>
-          <association Id="d6e276bd-1d12-470f-9b6d-fd613ea79b46" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View Github Repositories" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="8facb503-3804-46a3-9170-721390cbe885" LastKnownName="View Github Repositories" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="34bbd53e-1313-499e-94cb-8c0105e4eaca" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="08b141a1-9e42-4d6a-b2de-bc4e0589c0ba" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="e0fcdad5-1b55-43d5-944d-d74941f5fe14" name="View Github Repositories" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="c8aa3eb7-4a62-41f1-8507-7c8b995f59f9" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="2dd3db23-1b67-4519-a1dc-200571837fae" />
-          </association>
-          <association Id="9769fb18-b6b6-4414-8ff4-383717c11cbb" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View Sourcefiles" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="6d109c8d-1a77-46c3-a151-8bdf8745c43c" LastKnownName="View Sourcefiles" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="1a8082a3-129c-477b-b2c0-5f20f9e0ae03" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="ec83240f-4e4b-446b-ab34-6b172467e289" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="323c3af2-f422-4f12-ab5d-5016406b4026" name="View Sourcefiles" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="dae08bda-39d4-4586-b1fd-a57ec19b014c" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="02ecc0cb-f8ae-47cb-8bad-ba20efb3a772" />
-          </association>
-          <association Id="7255914e-babd-402e-ab14-1c40e9baf66a" isDerived="false" sourceEndRoleName="User" targetEndRoleName="View Tags" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="1f5007a0-9485-4219-9035-76ecc403236e" LastKnownName="View Tags" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="0df78c8f-ce90-491b-84b3-452cb9fecb1b" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="ac72a65b-92e0-4503-b95f-dbe6639609c3" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="622ce1a9-53db-41e2-b828-f4490e973296" name="View Tags" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="c157b7fb-5d7c-4ded-bf63-7f83c90ae77f" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="daf2e3b1-a4db-40ae-992c-0dc8cf31d851" />
-          </association>
         </targetEnds>
       </actor>
     </useCaseModelRootHasTypes>
@@ -167,93 +67,13 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="60bd0557-ac77-4d03-9ce0-f4384805339a" name="Remove Github Repository" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="969a1c9c-df95-4bc3-83cb-f8903693edcd" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
       <useCase Id="3e9370d1-f0fd-436d-a0d2-de7e3e4724a9" name="Tag Sourcefile" isAbstract="false" isLeaf="false">
         <elementDefinition Id="a5fe6772-dc01-4983-b410-e4d72225c153" />
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="7e4998ab-f059-49a5-a699-d7d45852525c" name="Remove Sourcefile Tag" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="49a39c5b-c66d-4743-a534-31cbd2631eab" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
       <useCase Id="b26d360a-cb19-43f8-92d3-b0a6cd54257f" name="Search Sourcefile" isAbstract="false" isLeaf="false">
         <elementDefinition Id="823e2496-c293-4d10-8718-658fa2fac121" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="8facb503-3804-46a3-9170-721390cbe885" name="View Github Repositories" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="678a174e-4e10-4191-9aba-993a78324a66" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="6d109c8d-1a77-46c3-a151-8bdf8745c43c" name="View Sourcefiles" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="e75487f8-3bda-441e-8402-7a46759fa5c8" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="1f5007a0-9485-4219-9035-76ecc403236e" name="View Tags" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="4fd15417-ab6f-4fe0-9824-62cb6e84a0b1" />
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="7d91475a-a62b-423a-b51f-1d137b7423b4" name="Group by  tag" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="af515691-2aa2-406b-a659-c6c7f5e2f0e1" />
-        <extendedCases>
-          <extend Id="13fd431f-2c32-469b-8840-1153187aaae4">
-            <useCaseMoniker Id="6d109c8d-1a77-46c3-a151-8bdf8745c43c" LastKnownName="View Sourcefiles" />
-            <elementDefinition Id="eb0df898-4258-4d42-966e-33f438caf316" />
-          </extend>
-        </extendedCases>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="ca84aa99-5d10-4f2a-9003-cd1c933ba010" name="Group by Github Repository" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="dc7ff173-ae31-4bc9-842d-7670bc84d77b" />
-        <extendedCases>
-          <extend Id="5df20b91-222b-439c-b295-feee54f752ed">
-            <useCaseMoniker Id="6d109c8d-1a77-46c3-a151-8bdf8745c43c" LastKnownName="View Sourcefiles" />
-            <elementDefinition Id="4a6ac640-1b9b-4c8a-b435-0eb4601046f9" />
-          </extend>
-        </extendedCases>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="bcc72714-0c39-4e92-8ce6-2c322bf78ca4" name="Group by tag" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="f6012438-c8a4-4d59-b244-6e96320ca198" />
-        <extendedCases>
-          <extend Id="2a446623-f013-4de8-806f-859bf3a91697">
-            <useCaseMoniker Id="8facb503-3804-46a3-9170-721390cbe885" LastKnownName="View Github Repositories" />
-            <elementDefinition Id="7aa51006-bfd4-41a8-be9d-17e808535ba4" />
-          </extend>
-        </extendedCases>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="f6f3d3d1-c66f-426c-ab7a-4089f3f18cd9" name="Group by name" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="c1df5726-3c5e-4d6a-872e-813be61d1cc8" />
-        <extendedCases>
-          <extend Id="d936b3be-3047-4d57-904d-4b6ac7e61a7f">
-            <useCaseMoniker Id="8facb503-3804-46a3-9170-721390cbe885" LastKnownName="View Github Repositories" />
-            <elementDefinition Id="62b8b386-5b91-4690-8790-356ff563ff1b" />
-          </extend>
-        </extendedCases>
-      </useCase>
-    </useCaseModelRootHasTypes>
-    <useCaseModelRootHasTypes>
-      <useCase Id="a682e270-9f99-49aa-89ac-4d241282b6ea" name="Search by name" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="378f0f70-4890-4739-ba29-6fdada166820" />
-        <extendedCases>
-          <extend Id="1fbdccb9-9c45-4374-aac7-db9882775704">
-            <useCaseMoniker Id="b26d360a-cb19-43f8-92d3-b0a6cd54257f" LastKnownName="Search Sourcefile" />
-            <elementDefinition Id="c5b93979-35db-49f4-83bf-473d71cb2368" />
-          </extend>
-        </extendedCases>
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
@@ -270,5 +90,25 @@
   </packagedElements>
   <package Id="928d1a50-0202-4e68-8d2b-0ba49cb294b5" name="Models">
     <elementDefinition Id="82ea3f5a-ccf8-4e9e-bf1d-f39a8f19da85" />
+    <profileInstances>
+      <packageHasProfileInstances Id="ccd23711-f8e1-42ae-8f66-4a919da6077b">
+        <profileInstance Id="e4e40a31-4b4a-47aa-bc42-841694bebaba" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="dfbca5b3-c983-4a18-a2cf-cc3dd53561b9">
+        <profileInstance Id="038d34d9-bbff-4b18-a038-3a0af36d3e22" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e3b38395-cfa4-40c6-9227-e3a155cb4ca5">
+        <profileInstance Id="02c69592-0a26-413a-9987-f788f406440a" name="DomainDrivenDesignModeling">
+          <elementDefinition Id="76f1eeeb-ead0-464e-be04-6717cf712f39" />
+        </profileInstance>
+        <elementDefinition Id="b45dad57-3ea9-48af-ac7d-97380cbf3d5b" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

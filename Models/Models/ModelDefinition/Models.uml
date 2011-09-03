@@ -402,7 +402,7 @@
     <packageHasNamedElement>
       <class
         Id="b17f4491-ece1-4045-8269-81a5f135e806"
-        name="Add Tag"
+        name="Tag Sourcefile"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -450,7 +450,7 @@
     <packageHasNamedElement>
       <class
         Id="0dfb6039-866d-4af7-8841-d9b561924d35"
-        name="Tag Added"
+        name="Sourcefile Tagged"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
@@ -994,6 +994,22 @@
           </extend>
         </extendedCases>
       </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2f281624-38da-4ffc-8c07-681c27d91a64"
+        name="Sourcefile Untagged"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="071ab1f1-ac48-4d39-b2e4-8b4b90677d20"
+        name="Untag Sourcefile"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

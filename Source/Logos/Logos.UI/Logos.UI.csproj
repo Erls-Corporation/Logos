@@ -11,7 +11,8 @@
     <RootNamespace>Logos.UI</RootNamespace>
     <AssemblyName>Logos.UI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -36,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\..\..\Libraries\autofac\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,7 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Commands\ImportRepositoryCommand.cs" />
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\RepositoryImportedEventArgs.cs" />
+    <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\TagViewModel.cs" />
+    <Compile Include="Views\RepositoryListView.xaml.cs">
+      <DependentUpon>RepositoryListView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,10 +75,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="ViewModels\RepositoryListViewModel.cs" />
+    <Compile Include="ViewModels\RepositoryViewModel.cs" />
+    <Compile Include="ViewModels\SourcefileViewModel.cs" />
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\RepositoryListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -86,12 +105,32 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logos.ApplicationServices\Logos.ApplicationServices.csproj">
+      <Project>{F9046286-DE24-4B8F-B165-67EB530E8B0E}</Project>
+      <Name>Logos.ApplicationServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logos.Domain\Logos.Domain.csproj">
+      <Project>{BA66ADB1-08FE-47D9-ACCC-F9D25459CCB4}</Project>
+      <Name>Logos.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logos.Infrastructure\Logos.Infrastructure.csproj">
+      <Project>{6CD0BB58-D4D1-4E4C-B684-E1DC6034C6AF}</Project>
+      <Name>Logos.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logos.ReadModel\Logos.ReadModel.csproj">
+      <Project>{E4911AE2-C198-4AF8-804F-5FCA5C514A0A}</Project>
+      <Name>Logos.ReadModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

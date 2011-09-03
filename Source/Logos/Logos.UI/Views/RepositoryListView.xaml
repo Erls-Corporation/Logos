@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="Logos.UI.Views.RepositoryListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <TreeView Grid.Row="0"
+                  ItemsSource="{Binding Path=Repositories}"
+                  x:Name="RepositoryTreeView">
+            
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Path=Sourcefiles}">
+                    <TextBlock Text="{Binding Path=Name}"/>
+
+                    <HierarchicalDataTemplate.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding Path=Tags}">
+                            
+                            <TextBlock Text="{Binding Path=Name}">
+                                <TextBlock.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Tag File" Click="MenuItem_Click"/>
+                                    </ContextMenu>
+                                </TextBlock.ContextMenu>
+                                
+                                
+                              
+                            </TextBlock>
+
+                            <HierarchicalDataTemplate.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=Name}" />
+                                </DataTemplate>
+                            </HierarchicalDataTemplate.ItemTemplate>
+                        </HierarchicalDataTemplate>
+                    </HierarchicalDataTemplate.ItemTemplate>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+            
+        </TreeView>
+
+            <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="User"
+                       Grid.Row="0"
+                       Grid.Column="0" />
+            <TextBox Text="{Binding Path=User}"
+                     Grid.Row="0"
+                     Grid.Column="1" />
+
+            <TextBlock Text="Api Token"
+                       Grid.Row="1"
+                       Grid.Column="0" />
+            <TextBox Text="{Binding Path=ApiToken}"
+                     Grid.Row="1"
+                     Grid.Column="1" />
+
+            <TextBlock Text="Repository"
+                       Grid.Row="2"
+                       Grid.Column="0" />
+            <TextBox Text="{Binding Path=Repository}"
+                     Grid.Row="2"
+                     Grid.Column="1" />
+
+            <Button Command="{Binding Path=ImportRepositoryCommand}"
+                    Content="Import"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    Grid.Column="1" />
+
+            <TextBlock Text="New Tag"
+                       Grid.Row="4"
+                       Grid.Column="0" />
+            <TextBox Text="{Binding Path=NewTag}"
+                     Grid.Row="4"
+                     Grid.Column="1" />
+        </Grid>
+    </Grid>
+</UserControl>
