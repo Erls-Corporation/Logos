@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Common\IMessengerAdapter.cs" />
     <Compile Include="Common\MessengerAdapter.cs" />
+    <Compile Include="Persistence\EventVersionizer.cs" />
     <Compile Include="Persistence\InMemoryCommandMessageBus.cs" />
     <Compile Include="Persistence\DelegateAdjuster.cs" />
     <Compile Include="Persistence\IEventPublisher.cs" />

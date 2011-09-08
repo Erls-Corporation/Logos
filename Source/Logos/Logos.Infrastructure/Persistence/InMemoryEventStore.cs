@@ -9,16 +9,18 @@ namespace Logos.Infrastructure.Persistence
     {
         readonly IEventPublisher _publisher;
         readonly Dictionary<Guid, List<EventDescriptor>> _eventStorage;
+        readonly EventVersionizer _versionizer;
 
         public InMemoryEventStore(IEventPublisher publisher)
         {
             _publisher = publisher;
             _eventStorage = new Dictionary<Guid, List<EventDescriptor>>();
+            _versionizer = new EventVersionizer();
         }
 
         public void SaveEvents(Guid aggregateId, IEnumerable<IDomainEvent> newEvents, int expectedVersion)
         {
-            AssignVersionNumbers(newEvents, expectedVersion);
+            _versionizer.Versionize(newEvents, expectedVersion);
             SaveNewEvents(aggregateId, newEvents);
             PublishNewEvents(newEvents);
         }
@@ -26,16 +28,6 @@ namespace Logos.Infrastructure.Persistence
         public IEnumerable<IDomainEvent> GetEventsForAggregate(Guid aggregateId)
         {
             return GetSavedEvents(aggregateId).Select(eventDescriptor => eventDescriptor.EventData).ToList();
-        }
-
-        void AssignVersionNumbers(IEnumerable<IDomainEvent> newEvents, int expectedVersion)
-        {
-            DomainEventVersion currentVersion = new DomainEventVersion(expectedVersion);
-            foreach (IDomainEvent newEvent in newEvents)
-            {
-                currentVersion = currentVersion.Increment();
-                newEvent.AssignVersion(currentVersion);
-            }
         }
 
         List<EventDescriptor> GetSavedEvents(Guid aggregateId)
