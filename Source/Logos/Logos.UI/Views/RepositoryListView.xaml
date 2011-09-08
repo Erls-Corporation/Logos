@@ -79,7 +79,7 @@
             <TextBlock Text="Repository"
                        Grid.Row="2"
                        Grid.Column="0" />
-            <TextBox Text="{Binding Path=Repository}"
+            <TextBox Text="{Binding Path=Repository, UpdateSourceTrigger=PropertyChanged}"
                      Grid.Row="2"
                      Grid.Column="1" />
 

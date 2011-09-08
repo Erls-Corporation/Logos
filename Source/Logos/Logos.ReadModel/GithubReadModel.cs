@@ -25,5 +25,11 @@ namespace Logos.ReadModel
         {
             return _queryDatabase.GetTagsBySourcefile(repositoryId, sourcefile);
         }
+
+
+        public RepositoryListDto GetRepositoryListByName(string repositoryName)
+        {
+            return _queryDatabase.GetRepositoryListByName(repositoryName);
+        }
     }
 }

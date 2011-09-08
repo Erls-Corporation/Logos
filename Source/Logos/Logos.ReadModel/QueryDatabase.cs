@@ -58,5 +58,11 @@ namespace Logos.ReadModel
         {
             return _repositoryLists.AsEnumerable();
         }
+
+
+        public RepositoryListDto GetRepositoryListByName(string repositoryName)
+        {
+            return _repositoryLists.Where(repo => repo.Name == repositoryName).FirstOrDefault();
+        }
     }
 }

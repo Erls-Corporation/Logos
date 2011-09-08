@@ -9,6 +9,7 @@ namespace Logos.ReadModel
         void AddRepositoryListSourcefileTag(Guid repositoryListId, int version, string sourcefilename, string tag);
 
         RepositoryListDto GetRepositoryListById(Guid repositoryId);
+        RepositoryListDto GetRepositoryListByName(string repositoryName);
         IEnumerable<string> GetTagsBySourcefile(Guid repositoryId, string sourcefileName);
         IEnumerable<RepositoryListDto> GetAllRepositories();
     }

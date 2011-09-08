@@ -17,7 +17,7 @@ namespace Logos.UI.Commands
         {
             _commandSender = commandSender;
             _readModel = readModel;
-            _value = new RelayCommand(obj => this.Import());
+            _value = new RelayCommand(obj => this.Import(), obj => this.CanImport());
         }
 
         public ICommand Value
@@ -31,6 +31,11 @@ namespace Logos.UI.Commands
         public string User { get; set; }
         public string ApiToken { get; set; }
         public string Repository { get; set; }
+
+        public bool CanImport()
+        {
+            return _readModel.GetRepositoryListByName(Repository) == null;
+        }
 
         void Import()
         {
