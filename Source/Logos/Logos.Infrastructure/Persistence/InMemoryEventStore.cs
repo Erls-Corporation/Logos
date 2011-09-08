@@ -18,14 +18,14 @@ namespace Logos.Infrastructure.Persistence
             _versionizer = new EventVersionizer();
         }
 
-        public void SaveEvents(Guid aggregateId, IEnumerable<IDomainEvent> newEvents, int expectedVersion)
+        public void SaveEvents(Guid aggregateId, IEnumerable<DomainEvent> newEvents, int expectedVersion)
         {
             _versionizer.Versionize(newEvents, expectedVersion);
             SaveNewEvents(aggregateId, newEvents);
             PublishNewEvents(newEvents);
         }
 
-        public IEnumerable<IDomainEvent> GetEventsForAggregate(Guid aggregateId)
+        public IEnumerable<DomainEvent> GetEventsForAggregate(Guid aggregateId)
         {
             return GetSavedEvents(aggregateId).Select(eventDescriptor => eventDescriptor.EventData).ToList();
         }
@@ -46,30 +46,30 @@ namespace Logos.Infrastructure.Persistence
             }
         }
 
-        void SaveNewEvents(Guid aggregateId, IEnumerable<IDomainEvent> newEvents)
+        void SaveNewEvents(Guid aggregateId, IEnumerable<DomainEvent> newEvents)
         {
-            foreach (IDomainEvent newEvent in newEvents)
+            foreach (DomainEvent newEvent in newEvents)
             {
                 Save(aggregateId, newEvent);
             }
         }
 
-        void Save(Guid aggregateId, IDomainEvent newEvent)
+        void Save(Guid aggregateId, DomainEvent newEvent)
         {
             List<EventDescriptor> savedEvents = GetSavedEvents(aggregateId);
 
             savedEvents.Add(new EventDescriptor(aggregateId, newEvent));
         }
 
-        void PublishNewEvents(IEnumerable<IDomainEvent> newEvents)
+        void PublishNewEvents(IEnumerable<DomainEvent> newEvents)
         {
-            foreach (IDomainEvent newEvent in newEvents)
+            foreach (DomainEvent newEvent in newEvents)
             {
                 Publish(newEvent);
             }
         }
 
-        void Publish(IDomainEvent unpublishedEvent)
+        void Publish(DomainEvent unpublishedEvent)
         {
             _publisher.Publish(unpublishedEvent);
         }
@@ -77,9 +77,9 @@ namespace Logos.Infrastructure.Persistence
         sealed class EventDescriptor
         {
             readonly Guid _id;
-            readonly IDomainEvent _eventData;
+            readonly DomainEvent _eventData;
 
-            public EventDescriptor(Guid id, IDomainEvent eventData)
+            public EventDescriptor(Guid id, DomainEvent eventData)
             {
                 _id = id;
                 _eventData = eventData;
@@ -93,7 +93,7 @@ namespace Logos.Infrastructure.Persistence
                 }
             }
 
-            public IDomainEvent EventData
+            public DomainEvent EventData
             {
                 get
                 {
@@ -105,9 +105,14 @@ namespace Logos.Infrastructure.Persistence
             {
                 get
                 {
-                    return _eventData.VersionNumber;
+                    return _eventData.Version;
                 }
             }
+        }
+
+
+        public void ReplayAllEvents()
+        {
         }
     }
 }

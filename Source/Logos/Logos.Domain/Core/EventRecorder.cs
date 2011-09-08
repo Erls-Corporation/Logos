@@ -8,22 +8,22 @@ namespace Logos.Domain.Core
 {
     internal sealed class EventRecorder
     {
-        readonly List<IDomainEvent> _changes;
+        readonly List<DomainEvent> _changes;
 
         public EventRecorder()
         {
-            _changes = new List<IDomainEvent>();
+            _changes = new List<DomainEvent>();
         }
 
-        public IList<IDomainEvent> Changes
+        public IList<DomainEvent> Changes
         {
             get
             {
-                return new List<IDomainEvent>(_changes);
+                return new List<DomainEvent>(_changes);
             }
         }
 
-        public void Record(IDomainEvent change)
+        public void Record(DomainEvent change)
         {
             _changes.Add(change);
         }

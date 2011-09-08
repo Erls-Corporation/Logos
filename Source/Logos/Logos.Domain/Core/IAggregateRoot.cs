@@ -8,8 +8,8 @@ namespace Logos.Domain.Core
     {
         Guid Id { get; }
 
-        IEnumerable<IDomainEvent> GetUncommittedChanges();
+        IEnumerable<DomainEvent> GetUncommittedChanges();
         void MarkChangesAsCommitted();
-        void LoadFromHistory(IEnumerable<IDomainEvent> changes);
+        void LoadFromHistory(IEnumerable<DomainEvent> changes);
     }
 }

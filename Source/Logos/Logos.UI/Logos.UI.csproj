@@ -40,6 +40,9 @@
     <Reference Include="Autofac">
       <HintPath>..\..\..\Libraries\autofac\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\..\..\Libraries\RavenDB\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />

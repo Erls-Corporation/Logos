@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Logos.Domain.Events;
-using System.Linq;
 
 namespace Logos.Domain.Core
 {
@@ -37,12 +36,12 @@ namespace Logos.Domain.Core
             }
         }
 
-        public IEnumerable<IDomainEvent> GetUncommittedChanges()
+        public IEnumerable<DomainEvent> GetUncommittedChanges()
         {
             return _eventApplier.GetAppliedChanges();
         }
 
-        public void LoadFromHistory(IEnumerable<IDomainEvent> changes)
+        public void LoadFromHistory(IEnumerable<DomainEvent> changes)
         {
             EventHistoryApplier historyApplier = new EventHistoryApplier(this);
             historyApplier.Apply(changes);

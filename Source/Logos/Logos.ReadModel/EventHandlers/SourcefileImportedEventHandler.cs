@@ -12,7 +12,7 @@ namespace Logos.ReadModel.EventHandlers
 
         public void Handle(SourcefileImported domainEvent)
         {
-            _queryDatabase.AddRepositoryListSourcefile(domainEvent.GithubRepositoryId, domainEvent.VersionNumber, new SourcefileDto(domainEvent.GithubRepositoryId, domainEvent.Sourcefilename));
+            _queryDatabase.AddRepositoryListSourcefile(domainEvent.GithubRepositoryId, domainEvent.Version, new SourcefileDto(domainEvent.GithubRepositoryId, domainEvent.Sourcefilename));
         }
     }
 }

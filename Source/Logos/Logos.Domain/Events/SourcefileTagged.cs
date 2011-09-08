@@ -1,64 +1,28 @@
 using System;
+using System.Runtime.Serialization;
 namespace Logos.Domain.Events
 {
-    public sealed class SourcefileTagged : IDomainEvent
+    [DataContract]
+    public sealed class SourcefileTagged : DomainEvent
     {
-        readonly Guid _repositoryId;
-        readonly string _sourcefile;
-        readonly string _newTag;
-        DomainEventVersion _version;
+        public SourcefileTagged()
+        {
+        }
 
         public SourcefileTagged(Guid repositoryId, string sourcefile, string newTag)
         {
-            _repositoryId = repositoryId;
-            _sourcefile = sourcefile;
-            _newTag = newTag;
-            _version = new DomainEventVersion();
+            RepositoryId = repositoryId;
+            Sourcefile = sourcefile;
+            NewTag = newTag;
         }
 
-        public int VersionNumber
-        {
-            get
-            {
-                return _version.Value;
-            }
-        }
+        [DataMember]
+        public string NewTag { get; set; }
 
-        public DomainEventVersion Version
-        {
-            get
-            {
-                return _version;
-            }
-        }
+        [DataMember]
+        public Guid RepositoryId { get; set; }
 
-        public string NewTag
-        {
-            get
-            {
-                return _newTag;
-            }
-        }
-
-        public Guid RepositoryId
-        {
-            get
-            {
-                return _repositoryId;
-            }
-        }
-
-        public string Sourcefile
-        {
-            get
-            {
-                return _sourcefile;
-            }
-        }
-
-        public void AssignVersion(DomainEventVersion newVersion)
-        {
-            _version = newVersion;
-        }
+        [DataMember]
+        public string Sourcefile { get; set; }
     }
 }

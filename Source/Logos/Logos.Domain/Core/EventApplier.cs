@@ -20,13 +20,13 @@ namespace Logos.Domain.Core
         }
 
         public void Apply<T>(T change)
-            where T : IDomainEvent
+            where T : DomainEvent
         {
             _recorder.Record(change);
             _methodCaller.CallByConvention(change);
         }
 
-        public IEnumerable<IDomainEvent> GetAppliedChanges()
+        public IEnumerable<DomainEvent> GetAppliedChanges()
         {
             return _recorder.Changes;
         }

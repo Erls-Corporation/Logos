@@ -52,5 +52,11 @@ namespace Logos.ReadModel
 
             return sourcefile.Tags;
         }
+
+
+        public IEnumerable<RepositoryListDto> GetAllRepositories()
+        {
+            return _repositoryLists.AsEnumerable();
+        }
     }
 }

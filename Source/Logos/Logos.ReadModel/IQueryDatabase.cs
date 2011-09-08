@@ -10,5 +10,6 @@ namespace Logos.ReadModel
 
         RepositoryListDto GetRepositoryListById(Guid repositoryId);
         IEnumerable<string> GetTagsBySourcefile(Guid repositoryId, string sourcefileName);
+        IEnumerable<RepositoryListDto> GetAllRepositories();
     }
 }

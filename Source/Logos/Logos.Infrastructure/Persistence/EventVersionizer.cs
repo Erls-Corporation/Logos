@@ -8,13 +8,13 @@ namespace Logos.Infrastructure.Persistence
         {
         }
 
-        public void Versionize(IEnumerable<IDomainEvent> events, int expectedVersion)
+        public void Versionize(IEnumerable<DomainEvent> events, int expectedVersion)
         {
             DomainEventVersion currentVersion = new DomainEventVersion(expectedVersion);
-            foreach (IDomainEvent newEvent in events)
+            foreach (DomainEvent newEvent in events)
             {
                 currentVersion = currentVersion.Increment();
-                newEvent.AssignVersion(currentVersion);
+                newEvent.Version = currentVersion.Value;
             }
         }
     }

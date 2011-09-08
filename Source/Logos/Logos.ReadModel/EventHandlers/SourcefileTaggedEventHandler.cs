@@ -12,7 +12,7 @@ namespace Logos.ReadModel.EventHandlers
 
         public void Handle(SourcefileTagged domainEvent)
         {
-            _queryDatabase.AddRepositoryListSourcefileTag(domainEvent.RepositoryId, domainEvent.VersionNumber, domainEvent.Sourcefile, domainEvent.NewTag);
+            _queryDatabase.AddRepositoryListSourcefileTag(domainEvent.RepositoryId, domainEvent.Version, domainEvent.Sourcefile, domainEvent.NewTag);
         }
     }
 }

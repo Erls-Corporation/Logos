@@ -6,7 +6,8 @@ namespace Logos.Infrastructure.Persistence
 {
     public interface IEventStore
     {
-        void SaveEvents(Guid aggregateId, IEnumerable<IDomainEvent> newEvents, int expectedVersion);
-        IEnumerable<IDomainEvent> GetEventsForAggregate(Guid aggregateId);
+        void SaveEvents(Guid aggregateId, IEnumerable<DomainEvent> newEvents, int expectedVersion);
+        IEnumerable<DomainEvent> GetEventsForAggregate(Guid aggregateId);
+        void ReplayAllEvents();
     }
 }

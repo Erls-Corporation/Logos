@@ -19,7 +19,7 @@ namespace Logos.Infrastructure.Persistence
             _routes.AddMessageHandler<T>(DelegateAdjuster.CastArgument<IMessage, T>(x => handler(x)));
         }
 
-        public void Publish<T>(T domainEvent) where T : IDomainEvent
+        public void Publish<T>(T domainEvent) where T : DomainEvent
         {
             List<Action<IMessage>> eventHandlers = _routes.GetMessageHandlers(domainEvent.GetType());
 

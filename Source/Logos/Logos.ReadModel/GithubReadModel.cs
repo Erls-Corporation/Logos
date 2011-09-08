@@ -11,6 +11,11 @@ namespace Logos.ReadModel
             _queryDatabase = queryDatabase;
         }
 
+        public IEnumerable<RepositoryListDto> GetAllRepositories()
+        {
+            return _queryDatabase.GetAllRepositories();
+        }
+
         public RepositoryListDto GetRepositoryListById(Guid repositoryId)
         {
             return _queryDatabase.GetRepositoryListById(repositoryId);

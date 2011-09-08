@@ -7,6 +7,7 @@ using Logos.Infrastructure.Common;
 using Logos.Infrastructure.Persistence;
 using System.Linq;
 using Logos.ApplicationServices.Commands;
+using System.Collections.Generic;
 
 namespace Logos.UI.ViewModels
 {
@@ -31,6 +32,8 @@ namespace Logos.UI.ViewModels
             _repositories = new ObservableCollection<RepositoryViewModel>();
 
             _importRepositoryCommand.RepositoryImported += RepositoryImportedEventHandler;
+
+            Initialize();
         }
 
         public string User
@@ -87,6 +90,18 @@ namespace Logos.UI.ViewModels
             get
             {
                 return _repositories;
+            }
+        }
+
+        void Initialize()
+        {
+            IEnumerable<RepositoryListDto> repositories = _readModel.GetAllRepositories().ToList();
+
+            foreach (RepositoryListDto currentRepository in repositories)
+            {
+                RepositoryViewModel newRepositoryViewModel = _repositoryFactory(currentRepository);
+
+                _repositories.Add(newRepositoryViewModel);
             }
         }
 

@@ -38,8 +38,12 @@
     <Reference Include="GithubSharp.Core">
       <HintPath>..\..\..\Libraries\GithubApi\GithubSharp.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\..\..\Libraries\RavenDB\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,10 +59,13 @@
     <Compile Include="Persistence\IEventPublisher.cs" />
     <Compile Include="Persistence\IEventStore.cs" />
     <Compile Include="Persistence\InMemoryEventStore.cs" />
+    <Compile Include="Persistence\JsonDeserializer.cs" />
+    <Compile Include="Persistence\JsonSerializer.cs" />
     <Compile Include="Persistence\MessageRouteRegistry.cs" />
     <Compile Include="Persistence\GithubRepositoryRepository.cs" />
     <Compile Include="Persistence\ICommandSender.cs" />
     <Compile Include="Persistence\InMemoryEventBus.cs" />
+    <Compile Include="Persistence\RavenDbEventStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

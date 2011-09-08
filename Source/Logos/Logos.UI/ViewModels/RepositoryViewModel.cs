@@ -53,9 +53,13 @@ namespace Logos.UI.ViewModels
             }
         }
 
-        void AddSourcefile(SourcefileDto sourcefile)
-        {
-            _sourcefiles.Add(_sourcefileFactory(sourcefile));
+       void AddSourcefile(SourcefileDto sourcefile)
+       {
+           SourcefileViewModel newSourcefile = _sourcefileFactory(sourcefile);
+
+           newSourcefile.AddTags(sourcefile.Tags);
+
+            _sourcefiles.Add(newSourcefile);
         }
 
         void InitializeSourcefiles()

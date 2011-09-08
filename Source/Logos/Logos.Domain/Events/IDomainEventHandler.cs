@@ -1,7 +1,7 @@
 namespace Logos.Domain.Events
 {
     public interface IDomainEventHandler<T>
-        where T : IDomainEvent
+        where T : DomainEvent
     {
         void Handle(T domainEvent);
     }

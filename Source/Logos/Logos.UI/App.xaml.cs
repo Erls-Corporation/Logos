@@ -18,6 +18,8 @@ using Logos.ReadModel;
 using Autofac.Core;
 using Logos.UI.Commands;
 using Logos.Infrastructure.Common;
+using Raven.Client;
+using Raven.Client.Document;
 
 namespace Logos.UI
 {
@@ -34,7 +36,13 @@ namespace Logos.UI
             {
                 MainWindow mainWindow = new MainWindow();
 
+
+                IEventStore storage = iocContainer.Resolve<IEventStore>();
+
+                storage.ReplayAllEvents();
+
                 mainWindow.DataContext = iocContainer.Resolve<MainWindowViewModel>();
+
 
                 mainWindow.ShowDialog();
             }
@@ -105,14 +113,29 @@ namespace Logos.UI
                 .As<IGithubRepositoryRepository>()
                 .SingleInstance();
 
-            builder.RegisterType<InMemoryEventStore>().As<IEventStore>().SingleInstance();
+            builder.RegisterType<RavenDbEventStore>().As<IEventStore>().SingleInstance();
 
             builder.RegisterType<MainWindowViewModel>();
             builder.RegisterType<RepositoryListViewModel>();
             builder.RegisterType<RepositoryViewModel>();
             builder.RegisterType<SourcefileViewModel>();
 
+            builder.RegisterInstance<IDocumentStore>(CreateRavenDbDocumentStore()).SingleInstance();
+
+
             return builder.Build();
+        }
+
+        IDocumentStore CreateRavenDbDocumentStore()
+        {
+            IDocumentStore newDocumentStore = new DocumentStore()
+                     {
+                         Url = "http://localhost:8080"
+                     };
+
+            newDocumentStore.Initialize();
+
+            return newDocumentStore;
         }
     }
 }

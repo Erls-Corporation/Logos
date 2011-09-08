@@ -14,7 +14,7 @@ namespace Logos.Domain.Core
         }
 
         public void Apply<T>(IEnumerable<T> changes)
-            where T : IDomainEvent
+            where T : DomainEvent
         {
             foreach (T currentChange in changes)
             {
@@ -23,7 +23,7 @@ namespace Logos.Domain.Core
         }
 
         void Apply<T>(T change)
-            where T : IDomainEvent
+            where T : DomainEvent
         {
             _methodCaller.CallByConvention(change);
         }

@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,7 +63,7 @@
     <Compile Include="Core\Tag.cs" />
     <Compile Include="Events\DomainEventVersion.cs" />
     <Compile Include="Events\RepositoryImported.cs" />
-    <Compile Include="Events\IDomainEvent.cs" />
+    <Compile Include="Events\DomainEvent.cs" />
     <Compile Include="Events\IDomainEventHandler.cs" />
     <Compile Include="Events\SourcefileImported.cs" />
     <Compile Include="Events\SourcefileTagged.cs" />
