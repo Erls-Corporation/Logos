@@ -4,6 +4,7 @@ using Logos.Domain.Events;
 using System.Linq;
 using Raven.Client.Document;
 using Raven.Client;
+using Raven.Client.Linq;
 
 namespace Logos.Infrastructure.Persistence
 {
@@ -32,9 +33,9 @@ namespace Logos.Infrastructure.Persistence
             using (IDocumentSession session = _eventStorage.OpenSession())
             {
                 var events = from eventDescriptor in session.Query<EventDescriptor>()
-                       where eventDescriptor.AggregateId == aggregateId
-                       orderby eventDescriptor.Version
-                       select eventDescriptor;
+                             where eventDescriptor.AggregateId == aggregateId
+                             orderby eventDescriptor.Version
+                             select eventDescriptor;
 
                 JsonDeserializer deserializer = new JsonDeserializer();
 
@@ -53,15 +54,37 @@ namespace Logos.Infrastructure.Persistence
         {
             using (IDocumentSession session = _eventStorage.OpenSession())
             {
-                var events = (from eventDescriptor in session.Query<EventDescriptor>()
-                              orderby eventDescriptor.AggregateId, eventDescriptor.Version
-                             select eventDescriptor).ToList();
+                int startPos = 0;
 
-                JsonDeserializer deserializer = new JsonDeserializer();
-
-                foreach (EventDescriptor ev in events)
+                while (true)
                 {
-                    Publish(deserializer.Deserialize(ev.EventType, ev.EventData));
+
+
+                    RavenQueryStatistics stats;
+                    var events = session.Query<EventDescriptor>()
+                        .Statistics(out stats)
+                        .OrderBy(ev => ev.AggregateId)
+                        .ThenBy(ev => ev.Version)
+                        .Select(ev => ev)
+                        .Skip(startPos)
+                        .ToArray();
+
+
+                    JsonDeserializer deserializer = new JsonDeserializer();
+
+                    foreach (EventDescriptor ev in events)
+                    {
+                        Publish(deserializer.Deserialize(ev.EventType, ev.EventData));
+                    }
+
+                    if (stats.TotalResults <= startPos)
+                    {
+                        break;
+                    }
+
+                    startPos += 128;
+
+                    
                 }
             }
         }
@@ -87,6 +110,7 @@ namespace Logos.Infrastructure.Persistence
 
             return new EventDescriptor()
                 {
+                    Id = Guid.NewGuid().ToString(),
                     AggregateId = aggregateId,
                     EventData = serializedEvent,
                     Version = newEvent.Version,

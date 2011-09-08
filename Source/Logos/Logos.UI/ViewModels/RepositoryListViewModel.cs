@@ -95,7 +95,7 @@ namespace Logos.UI.ViewModels
 
         void Initialize()
         {
-            IEnumerable<RepositoryListDto> repositories = _readModel.GetAllRepositories().ToList();
+            var repositories = _readModel.GetAllRepositories().ToList();
 
             foreach (RepositoryListDto currentRepository in repositories)
             {
